@@ -11,19 +11,6 @@ afterEach(cleanup);
 
 describe ('Display Component', () => {
 
-    // it('displays gate open/closed if locked or unlocked', () => {
-    //     const { getByText, queryByText } = render(<Display />);
-
-    //     const lockey = getByTitle
-        
-    //     const closed = getByText(/closed/i);
-    //     const unlocked = getByText(/unlocked/i);
-
-    //     expect(closed).toBeTruthy();
-    //     expect(unlocked).toBeInTheDocument();
-
-    // })
-
     it('if displays closed is red', () => {
         const { getByText, queryByText } = render(<Display  closed={true}/>);
         const closed = getByText(/closed/i);
