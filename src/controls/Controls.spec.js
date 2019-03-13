@@ -43,14 +43,14 @@ describe ('Display Component', () => {
     it('closed button disabled if the gate closed / and vice versa', () => {
         const { getByText, queryByText, rerender } = render(<Controls closed={false} locked={false} />);
 
-        const button = getByText('Close Gate');
+        const button =queryByText('Close Gate');
         expect(button).toBeInTheDocument();
 
         rerender(<Controls closed={true} locked={false} />)
 
-        const buttonB = getByText('Open Gate');
+        
 
-        expect(button).toBe(buttonB);
+        expect(button).not.toBeDisabled();
     })
     
 })
